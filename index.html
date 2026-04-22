@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项应用</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 我的待办事项</h1>
+        
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="todoInput" 
+                placeholder="输入新的待办事项..." 
+                autocomplete="off"
+            >
+            <button id="addBtn">添加</button>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="active">未完成</button>
+            <button class="filter-btn" data-filter="completed">已完成</button>
+        </div>
+
+        <ul id="todoList" class="todo-list"></ul>
+
+        <div class="stats">
+            <span>总数: <span id="totalCount">0</span></span>
+            <span>已完成: <span id="completedCount">0</span></span>
+            <span>未完成: <span id="activeCount">0</span></span>
+        </div>
+
+        <button id="clearBtn" class="clear-btn">清空已完成项</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
